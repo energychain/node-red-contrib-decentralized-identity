@@ -31,7 +31,16 @@ If a new `msg.payload` is received with a JWT it gets validated. On success `msg
 
 ### For Production
 
-Ensure gets persisted as the creation will otherwise create a new signing key on each request which makes it useless to validate the signer of a message.
+Ensure flow data gets persisted as the creation will otherwise create a new signing key on each request which makes it useless to validate the signer of a message.
+
+Hint: .node-red/settings.json
+```javascript
+contextStorage: {
+        default: {
+            module:"localfilesystem"
+        },
+    },
+```
 
 ## Maintainer / Imprint
 
