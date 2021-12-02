@@ -6,7 +6,7 @@
 
 [![npm](https://img.shields.io/npm/dt/node-red-contrib-decentralized-identity.svg)](https://www.npmjs.com/package/node-red-contrib-decentralized-identity)
 [![npm](https://img.shields.io/npm/v/node-red-contrib-decentralized-identity.svg)](https://www.npmjs.com/package/node-red-contrib-decentralized-identity)
-![CO2Offset](https://api.corrently.io/v2.0/ghgmanage/statusimg?host=node-red-contrib-decentralized-identity&svg=1)](https://co2offset.io/badge.html?host=node-red-contrib-decentralized-identity)
+[![CO2Offset](https://api.corrently.io/v2.0/ghgmanage/statusimg?host=node-red-contrib-decentralized-identity&svg=1)](https://co2offset.io/badge.html?host=node-red-contrib-decentralized-identity)
 
 Based on [DID-JWT](https://github.com/decentralized-identity/did-jwt) and [EthrDID](https://github.com/uport-project/ethr-did/).
 
