@@ -9,6 +9,7 @@ module.exports = function(RED) {
               let keypair = await storage.get("keys");
               if((typeof keypair == 'undefined')||(keypair == null)) {
                 keypair = EthrDID.createKeyPair();
+                keypair.id = "did:ethr:"+keypair.identifier;
                 storage.set("keys",keypair);
               }
               if(typeof msg.payload !== 'object') {

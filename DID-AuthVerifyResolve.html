@@ -1,0 +1,31 @@
+<script type="text/javascript">
+    RED.nodes.registerType('DID-AuthVerifyResolve',{
+        category: 'function',
+        color: '#a6bbcf',
+        defaults: {
+            name: {value:""},
+            authority: {value:""}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "file.png",
+        label: function() {
+            return this.name||"DID-AuthVerifyResolve";
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="DID-AuthVerifyResolve">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-authority"><i class="fa fa-tag"></i> Authority</label>
+        <input type="text" id="node-input-authority" placeholder="did:ethr:...">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="DID-AuthVerifyResolve">
+    <p>Verify signed JSON Web Token (JWT) in message payload and returns only parameters permitted by authority (Requires <pre>_auth</pre> containing JWT of authorization DID).</p>
+</script>

@@ -12,11 +12,11 @@ module.exports = function(RED) {
           const rpcUrl = "https://mainnet.infura.io/v3/d254009fd63f4c2bb4596685c0b93d73";
           const didResolver = new Resolver(getResolver({ rpcUrl, name: "mainnet" }));
           try {
+              msg._jwt = msg.payload;
               msg.payload = await ethrDid.verifyJWT(msg.payload, didResolver);
               msg.signer = msg.payload.signer;
               msg.issuer = msg.payload.issuer;
               msg.payload = msg.payload.payload;
-              if(typeof msg.payload._msg !== 'undefined') msg.payload = msg.payload._msg;
               node.send(msg);
               node.status({fill:"green",shape:"dot",text:msg.issuer.substr(9,20)+"..."});
             } catch(e) {
