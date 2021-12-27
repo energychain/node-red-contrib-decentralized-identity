@@ -9,8 +9,7 @@ module.exports = function(RED) {
         node.on('input', async function(msg) {
           const keypair = EthrDID.createKeyPair();
           const ethrDid = new EthrDID(keypair);
-          const rpcUrl = "https://mainnet.infura.io/v3/d254009fd63f4c2bb4596685c0b93d73";
-          const didResolver = new Resolver(getResolver({ rpcUrl, name: "mainnet" }));
+          const didResolver = new Resolver(getResolver({ rpcUrl:config.rpcUrl, name: "mainnet",chainId: config.chainId,registry:config.registry }));
           try {
               msg._jwt = msg.payload;
               msg.payload = await ethrDid.verifyJWT(msg.payload, didResolver);

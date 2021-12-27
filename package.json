@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-decentralized-identity",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Node-RED - DID-JWT nodes allowing to sign msg.payload and verify JSON Web Tokens (JWT) for use of payload in flow.",
   "main": "index.js",
   "scripts": {

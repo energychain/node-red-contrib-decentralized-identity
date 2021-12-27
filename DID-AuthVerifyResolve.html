@@ -4,7 +4,10 @@
         color: '#a6bbcf',
         defaults: {
             name: {value:""},
-            authority: {value:""}
+            authority: {value:""},
+            rpcUrl: {value:"https://integration.corrently.io/"},
+            chainId: {value:'6226'},
+            registry: {value:"0xBe96Ba6AF686dDB9D023a2E10BbF72663C6d9AA3"},
         },
         inputs:1,
         outputs:1,
@@ -23,6 +26,18 @@
     <div class="form-row">
         <label for="node-input-authority"><i class="fa fa-tag"></i> Authority</label>
         <input type="text" id="node-input-authority" placeholder="did:ethr:...">
+    </div>
+    <div class="form-row">
+        <label for="node-input-rpcUrl"><i class="fa fa-tag"></i> rpc URL</label>
+        <input type="text" id="node-input-rpcUrl" placeholder="like https://mainnet.infura.io/v3/[APIKEY]">
+    </div>
+    <div class="form-row">
+        <label for="node-input-chainId"><i class="fa fa-tag"></i> Chain Id</label>
+        <input type="text" id="node-input-chainId" placeholder="1 for mainnet">
+    </div>
+    <div class="form-row">
+        <label for="node-input-registry"><i class="fa fa-tag"></i> Registry (Contract Address)</label>
+        <input type="text" id="node-input-registry" placeholder="1 for mainnet">
     </div>
 </script>
 
